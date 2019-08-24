@@ -110,16 +110,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             .fillColor(Color.GREEN));
                 }
                 if (currentLocation.latitude == currentLocation.latitude && m == 1) { // if current location and danger location is same.
-//                    String str7 = Mydata.recpno(email);
-//                    Log.d("numbers", "" + str7);
-//                    Toast.makeText(this, "Number" + str7, Toast.LENGTH_SHORT).show();
-//                    al3 = str7.split(",");
-//                    for (int i = 0; i < al3.length; i++) {
-//                        sm.sendTextMessage(al3[i], null, "Your Friend in Danger Zone at that Location " + str, null, null);
-//                        Toast.makeText(this, "Message Send", Toast.LENGTH_SHORT).show();
-//
-//                    }
-//                    m++;
+                    String str7 = Mydata.recpno(email);
+                    Log.d("numbers", "" + str7);
+                    Toast.makeText(this, "Number" + str7, Toast.LENGTH_SHORT).show();
+                    al3 = str7.split(",");
+                    for (int i = 0; i < al3.length; i++) {
+                        sm.sendTextMessage(al3[i], null, "Your Friend in Danger Zone at that Location " + str, null, null);
+                        Toast.makeText(this, "Message Send", Toast.LENGTH_SHORT).show();
+                    }
+                    m++;
                 }
                 if (k == 1) {
                     str9 = Mydata.adddangerlocation("" + currentLocation.latitude, "" + currentLocation.longitude, email);
